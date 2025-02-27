@@ -149,8 +149,8 @@ Promise.all(
 		d3.csv("./data/national_health_data_2024.csv")
 	]).then(([us, data]) =>
 		{
-			data = data.map(d => (
-			{
+			data = data.map(d =>
+			({
 				cnty_fips: d.cnty_fips,
 				poverty_perc: +d.poverty_perc,
 				percent_coronary_heart_disease: +d.percent_coronary_heart_disease,
@@ -231,13 +231,15 @@ Promise.all(
 			updateLegend("poverty");
 
 			// Update legend on dropdown change
-			d3.select("#attribute-selector").on("change", function () {
+			d3.select("#attribute-selector").on("change", function ()
+			{
 				selectedAttribute = this.value;
 				updateLegend(selectedAttribute);
 				map.selectAll(".county")
 					.transition()
 					.duration(500)
-					.attr("fill", d => {
+					.attr("fill", d =>
+						{
 						const val = dataMap.get(d.id)?.[selectedAttribute];
 						return val !== undefined ? colorScales[selectedAttribute](val) : "#ccc";
 					});
