@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Counties Health Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Exploring Poverty and Coronary Heart Disease in US Counties</h1>
+    <p>By Alex Yermakov | Data Source: US Heart and Stroke Atlas | Libraries: D3.js</p>
+    
+    <h2>Choropleth Map of US Counties</h2>
+    <div id="map"></div>
+    <br>
+    <select id="attribute-selector">
+        <option value="poverty">Poverty</option>
+        <option value="chd">CHD</option>
+        <option value="cholesterol">Cholesterol</option>
+    </select>
+
+    <h2>Scatterplot: Poverty vs CHD</h2>
+    <div id="scatterplot"></div>
+
+    <h2>Histograms</h2>
+    <div class="chart-container">
+        <div id="histogram-poverty" class="chart"></div>
+        <div id="histogram-chd" class="chart"></div>
+    </div>
+
+    <script src="./js/main.js"></script>  
+</body>
+</html>

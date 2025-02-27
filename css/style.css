@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map {
+    width: 960px;
+    height: 600px;
+    margin-bottom: 20px; /* Add spacing below the map */
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Ensure charts don’t appear above the map */
+}
+
+.chart {
+    width: 500px;
+    height: 400px;
+}
+
+#scatterplot {
+    margin-top: 20px; /* Ensure scatterplot doesn't shift above */
+}
